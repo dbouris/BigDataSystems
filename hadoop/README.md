@@ -75,3 +75,57 @@ The 3 last coordinates which represent the centers in the last iteration of the 
  100000.0, 100000.0
  -100000.0, -100000.0
 ```
+
+Here is a snippet of the logs generated from the first KMeans and Map - Combine - Reduce operation. <br>
+The full generated logs can be found [here](files/hadoop_output_logs.txt)
+
+
+``` shell
+...
+
+2023-04-21 16:42:29,197 INFO mapred.Task: Final Counters for attempt_local868978880_0001_r_000000_0: Counters: 30
+        File System Counters
+                FILE: Number of bytes read=10885
+                FILE: Number of bytes written=577409
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=18034485
+                HDFS: Number of bytes written=54
+                HDFS: Number of read operations=10
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=3
+                HDFS: Number of bytes read erasure-coded=0
+        Map-Reduce Framework
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=3
+                Reduce shuffle bytes=168
+                Reduce input records=3
+                Reduce output records=3
+                Spilled Records=3
+                Shuffled Maps =1
+                Failed Shuffles=0
+                Merged Map outputs=1
+                GC time elapsed (ms)=0
+                Total committed heap usage (bytes)=304611328
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Output Format Counters 
+                Bytes Written=54
+    ...
+```
+
+# References
+- [Medium: MapReduce with Python](https://medium.com/geekculture/mapreduce-with-python-5d12a772d5b3)
+- [MapReduce Jobs in Python](https://maelfabien.github.io/bigdata/MRJobP/#)
+- [Mapreduce Python example](https://linuxhint.com/mapreduce-framework-python/)
+- [GeeksForGeeks: MapReduce - Combiners](https://www.geeksforgeeks.org/mapreduce-combiners/)
+
+
+
