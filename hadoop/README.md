@@ -40,7 +40,7 @@ The `KMeans.py` is the 'coordinator' and is responsible for connecting to the lo
 # Running and testing KMeans on Hadoop
 
 1. Generate the test dataset by running the `generateDataset.py` script which is located in the `/files` folder. A `data-points.csv` is the created.
-    - The Python file contains a function which generates a dataset of 2D data points distributed around some pre-specified centers.
+    - The Python file contains the `generateDataPoints()` function which generates a dataset of 2D data points distributed around some pre-specified centers.
 
 2. Start the hadoop clusters and move the data points file to the hdfs by running the commands below from the `/hadoop` directory of the project.
 
@@ -56,11 +56,11 @@ $ hdfs dfs -put files/data-points.csv /kmeans # move the data points file to hdf
 # Execution Report and results
 The KMeans Map - Combine - Reduce operation calculates the new centers after 3 iterations. The returned centers match with the pre-defined ones when the dataset was created, indicating that the KMeans ran succesfully and that the results are accurate. 
 
-Below, the `all-centers.csv` file is presented. This file contains the different states of the centers. Each line represents the x and y coordinates of each center. Since we have 3 clusters (thus 3 centers) the first 3 lines represent the centers of the first iteration and so on. <br>
-The 3 last coordinates which represent the centers in the last iteration of the KMeans algorithm match the pre-defined centers ([[-100000, -100000], [1, 1], [100000, 100000]])  in the `generateDataPoints()`.
+Below, the `all-centers.csv` file is presented. This file contains the different states of the centers foreach iteration. Each line represents the x and y coordinates of each center. Since we have 3 clusters (thus 3 centers) the first 3 lines represent the centers of the first iteration and so on. <br>
+The 3 last coordinates which represent the centers in the last iteration of the KMeans algorithm match the pre-defined centers ([[-100000, -100000], [1, 1], [100000, 100000]]).
 
 ``` shell
-all-centers.csv
+# all-centers.csv
 
  -6.4, 5.9
  99996.0, 99998.7
