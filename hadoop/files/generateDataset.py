@@ -32,6 +32,6 @@ if __name__ == "__main__":
     # specify the centers around which we want the data to be formed
     centers = [[-100000, -100000], [1, 1], [100000, 100000]]
     # specify the export path
-    export_path = "files/data-points.csv"
+    export_path = "data-points.csv"
 
     generateDataPoints(rows, centers, export_path)
