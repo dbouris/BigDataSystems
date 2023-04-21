@@ -52,6 +52,10 @@ $ hdfs dfs -put files/data-points.csv /kmeans # move the data points file to hdf
 
 3. Then run the `KMeans.py`. The Map - Combine - Reduce is executed and the final cluster centers is printed. 
 
+*Execution Notes:*
+- To succesfully run the project the hadoop paths in the `KMeans.py` file need to be changed to match each installation
+- Having in mind that the current implementation was configured and tested in a macOS operating system, running it in a different enviroment might need further adaptations.
+
 
 # Execution Report and results
 The KMeans Map - Combine - Reduce operation calculates the new centers after 3 iterations. The returned centers match with the pre-defined ones when the dataset was created, indicating that the KMeans ran succesfully and that the results are accurate. 
