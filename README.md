@@ -1,4 +1,4 @@
-# Big Data Systems - Assignments
+# Big Data Management Systems - Assignments
 
 The current repository hosts the assignments in the context of the course "Big Data Management Systems" by Prof. Chatziantoniou in the Department of Management Science and Technology in the Athens University of Economics and Business. 
 
