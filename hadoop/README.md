@@ -2,7 +2,7 @@
 
 In this assignment, the core objective is to implement the KMeans Clustering Algorithm in a Haddoop environment. More specificaly, the Mapper and Reducer functions should be implemented. A detailed description of the assignment can be found [here](files/Proj2_Hadoop.pdf).
 
-# Hadoop Insallation
+# Hadoop Installation
 
 The installation of Hadoop on our local machine (Mac M1) was done according to the following instructions:
 - [Article 1](https://codewitharjun.medium.com/install-hadoop-on-macos-m1-m2-6f6a01820cc9)
@@ -77,7 +77,7 @@ The 3 last coordinates which represent the centers in the last iteration of the 
 ```
 
 Here is a snippet of the logs generated from the first KMeans and Map - Combine - Reduce operation. <br>
-The full generated logs can be found [here](files/hadoop_output_logs.txt)
+The full logs can be found [here](files/hadoop_output_logs.txt)
 
 
 ``` shell
@@ -126,6 +126,3 @@ The full generated logs can be found [here](files/hadoop_output_logs.txt)
 - [MapReduce Jobs in Python](https://maelfabien.github.io/bigdata/MRJobP/#)
 - [Mapreduce Python example](https://linuxhint.com/mapreduce-framework-python/)
 - [GeeksForGeeks: MapReduce - Combiners](https://www.geeksforgeeks.org/mapreduce-combiners/)
-
-
-
