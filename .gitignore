@@ -1,0 +1,13 @@
+# Redis database files
+*.rdb
+
+# Python compiled files
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+
+# Dependency directories
+venv/
+env/
