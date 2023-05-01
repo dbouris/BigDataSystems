@@ -10,8 +10,16 @@ def join_meeting(user_id, meeting_instance_id):
         return "Meeting instance is not active"
     
     # Check if meeting is public or user is allowed to join
-    audience = r.hget(meeting_instance_id, 'audience').decode('utf-8')
-    if r.hget(meeting_instance_id, 'isPublic').decode('utf-8') == 'false' and user_id not in audience:
+    is_public = r.hget(meeting_instance_id, 'isPublic').decode('utf-8') == 'true'
+    if is_public:
+        audience = []
+    else:
+        audience = r.hget(meeting_instance_id, 'audience')
+        if audience is None:
+            return "Audience list is missing for this meeting"
+        audience = audience.decode('utf-8').split(',')
+    
+    if not is_public and user_id not in audience:
         return "User is not allowed to join this meeting"
     
     # Add user to participants set
@@ -35,6 +43,7 @@ def leave_meeting(user_id, meeting_instance_id):
     r.rpush('eventsLog', f"{user_id} left {meeting_instance_id} at {time.time()}")
     
     return "User left meeting successfully"
+
 
 def show_current_participants(meeting_instance_id):
     # Get set of participants
@@ -75,14 +84,15 @@ def end_meeting(meeting_instance_id):
 
 def post_chat_message(user_id, meeting_instance_id, message):
     # Check if message has already been posted
-    if message in show_chat_messages(meeting_instance_id):
-        return "Message already posted"
+    messages = show_chat_messages(meeting_instance_id)
+    for m in messages:
+        if m.split(": ", 1)[1] == message:
+            return "Error: Message has already been posted"
     
     # Add chat message to meeting instance list
     r.rpush(f"{meeting_instance_id}:chat_messages", f"{user_id}: {message}")
     
     return "Chat message posted successfully"
-
 
 def show_chat_messages(meeting_instance_id):
     # Get chat messages list
