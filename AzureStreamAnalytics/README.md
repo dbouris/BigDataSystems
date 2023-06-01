@@ -1,7 +1,29 @@
 # Assignment Description
 
-In this assignment, the core objective is to create a fully functional Azure Stream Analytics job that will be able to process a stream of data from a simulated data stream. The data will firstly arrive to an Event Hub and then forwarded to the Stream Job to be processed. The data will be processed using SQL Queries and the results will be stored in a Blob Storage. A detailed description of the assignment can be found [here](Proj4_Stream_Analytics.pdf).
+In this assignment, the core objective is to create a fully functional Azure Stream Analytics job that will be able to process a stream of ATM data from a simulated data stream. The data will firstly arrive to an Event Hub and then forwarded to the Stream Job to be processed. The data will be processed using SQL Queries and the results will be stored in a Blob Storage. A detailed description of the assignment can be found [here](Proj4_Stream_Analytics.pdf).
 
+
+## ATM Data
+The Data Generator creates ATM data in JSON format. <br>
+Example ATM event: `{ "ATMCode": 10 , "CardNumber": 4026567514157759, "Type": 1 , "Amount": 42 }`
+
+A set of reference files are provided to the Stream Analytics Job. These files contain the following information:
+- Area.json: Contains the area code and the corresponding area name (area_country, area_city)
+- Atm.json: Contains the ATM code and the corresponding area code (area_code).
+- Customer.json: Contains personal information of the customer (first_name, last_name, age etc).
+
+## Queries 
+
+A set of queries should be modelled to process the incoming data. The queries asked are the following:
+1. Show the total `Amount` of `Type = 0` transactions at `ATM Code = 21` of the last 10 minutes. Repeat as new events keep flowing in (use a sliding window).
+2. Show the total `Amount` of `Type = 1` transactions at `ATM Code = 21` of the last hour. Repeat once every hour
+(use a tumbling window).
+3. Show the total `Amount` of `Type = 1` transactions at `ATM Code = 21` of the last hour. Repeat once every 30 minutes (use a hopping window).
+4. Show the total `Amount` of `Type = 1` transactions per `ATM Code` of the last one hour (use a sliding window).
+5. Show the total `Amount` of `Type = 1` transactions per `Area Code` of the last hour. Repeat once every hour (use a tumbling window).
+6. Show the total `Amount` per ATM’s `City` and Customer’s `Gender` of the last hour. Repeat once every hour (use a tumbling window).
+7. Alert (SELECT “1”) if a Customer has performed two transactions of `Type = 1` in a window of an hour (use a sliding window).
+8. Alert (SELECT “1”) if the `Area Code` of the ATM of the transaction is not the same as the “Area Code” of the `Card Number` (Customer’s Area Code) - (use a sliding window)
 
 
 # Azure Stream Analytics Configuration
