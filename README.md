@@ -12,7 +12,7 @@ This assignment involves creating a system similar to Teams or Zoom where admins
 
 ## Assignment 3 - Azure Stream Analytics
 
-This assignment involves setting up an full Azure Stream Analytics job to process a data stream of ATM transactions and answer various stream queries. The project can be found [here](azure-stream-analytics/) in more detail.
+This assignment involves setting up an full Azure Stream Analytics job to process a data stream of ATM transactions and answer various stream queries. The project can be found [here](/AzureStreamAnalytics/) in more detail.
 
 # Team
 - [Priovolos Philippos](https://github.com/Philippos01) (8190147)
