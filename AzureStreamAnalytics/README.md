@@ -74,12 +74,12 @@ View the Blob Storage setup screenshots [here](Setup_Screenshots/BlobStorage/).
     - `InputAreaRef` : The reference Blob storage with the `Area.json` file specified in the path.
     - `InputAtmRef` : The reference Blob storage with the `Atm.json` file specified in the path.
     - `InputCustomerRef` : The reference Blob storage with the `Customer.json` file specified in the path.  
-
-Comment: The "Sample" option on the input can be utilised to test the incoming data. A JSON file will be returned which is expected to contain the data sent to the Event Hub from the Generator.
-
 4. Add the Blob Storage container specified above (`atmresultscontainer`) as an Output with the following name:
     - `OutputBlob`
 5. Add the [sql queries](atmjob_queries.sql) specified in the Query tab of the Stream Analytics Job.
+
+The "Sample" option on the input can be utilised to test the incoming data. A JSON file will be returned which is expected to contain the data produced from the Generator and some attributes added by the Event Hub: `EventProcessedUtcTime`, `PartitionId` and `EventEnqueuedUtcTime`.
+
 
 View the Stream Analytics setup screenshots [here](Setup_Screenshots/StreamAnalyticsJob/).
 
