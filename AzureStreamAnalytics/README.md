@@ -95,3 +95,8 @@ View the Stream Analytics setup screenshots [here](Setup_Screenshots/StreamAnaly
 # Results
 The results of the job can be found [here](StreamJobResults/). <br>
 Each file contains the results of the corresponding query. The results are stored in JSON format.
+
+# References
+- [Quickstart: Create an event hub using Azure portal](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)
+- [Quickstart: Create a Stream Analytics job by using the Azure portal](https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-quick-create-portal)
+- [Azure Stream Analytics Tutorial | Processing stream data with SQL](https://www.youtube.com/watch?v=NbGmyjgY0pU&ab_channel=AdamMarczak-AzureforEveryone)
