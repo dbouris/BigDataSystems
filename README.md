@@ -14,6 +14,10 @@ This assignment involves creating a system similar to Teams or Zoom where admins
 
 This assignment involves setting up an full Azure Stream Analytics job to process a data stream of ATM transactions and answer various stream queries. The project can be found [here](/AzureStreamAnalytics/) in more detail.
 
+## Assignment 4 - Graph Databases/Neo4j
+
+This assignment is a comprehensive exploration of the implementation and benchmarking of a Neo4j graph database. It involves loading data from CSV files into the graph database, executing a variety of analytical queries, and measuring their performance. The project can be found [here](/Neo4j/) in more detail.
+
 # Team
 - [Priovolos Philippos](https://github.com/Philippos01) (8190147)
 - [Dimitris Bouris](https://github.com/dbouris) (8190119)
