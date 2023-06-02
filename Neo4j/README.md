@@ -98,5 +98,8 @@ Once the data is loaded into the Neo4j graph database, we perform a series of Cy
 
 As the benchmark results suggest, execution times for the queries vary based on the complexity of the query and the volume of data involved. Queries involving counts or operations on a large number of nodes or relationships generally take more time than queries working on a smaller subset of data or performing simpler operations. This provides valuable insights into the performance of Neo4j graph databases and can guide further optimization of the data model and query design.
 
+## Results
+The final outputs of each query with their corresponding execution time can be found [here](src/benchmark_output.txt)
+
 # Acknowledgements
 This project was created as part of Big Data Management Systems course at Department of Management Science & Technology in Athens University of Economics and Business
