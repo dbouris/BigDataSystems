@@ -130,3 +130,6 @@ The full logs can be found [here](files/hadoop_output_logs.txt)
 - [MapReduce Jobs in Python](https://maelfabien.github.io/bigdata/MRJobP/#)
 - [Mapreduce Python example](https://linuxhint.com/mapreduce-framework-python/)
 - [GeeksForGeeks: MapReduce - Combiners](https://www.geeksforgeeks.org/mapreduce-combiners/)
+
+# Acknowledgements
+This project was created as part of Big Data Management Systems course at Department of Management Science & Technology in Athens University of Economics and Business
