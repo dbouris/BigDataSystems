@@ -100,3 +100,6 @@ Each file contains the results of the corresponding query. The results are store
 - [Quickstart: Create an event hub using Azure portal](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)
 - [Quickstart: Create a Stream Analytics job by using the Azure portal](https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-quick-create-portal)
 - [Azure Stream Analytics Tutorial | Processing stream data with SQL](https://www.youtube.com/watch?v=NbGmyjgY0pU&ab_channel=AdamMarczak-AzureforEveryone)
+
+# Acknowledgements
+This project was created as part of Big Data Management Systems course at Department of Management Science & Technology in Athens University of Economics and Business
