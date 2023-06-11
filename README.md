@@ -8,7 +8,7 @@ In this assignment, the core objective is to implement the KMeans Clustering Alg
 
 ## Assignment 2 - Redis
 
-This assignment involves creating a system similar to Teams or Zoom where admins can set up meetings and users can join or leave them. The system will use a key-value store called Redis to store information about users, meetings, and meeting instances, as well as a log of events. The events can include users joining or leaving a meeting, and a meeting can be public or have a specific audience. The project will involve implementing several functions in Python or Java that connect to Redis, including functions for joining and leaving meetings, posting chat messages, and displaying information about meetings and participants.
+This assignment involves creating a system similar to Teams or Zoom where admins can set up meetings and users can join or leave them. The system will use a key-value store called Redis to store information about users, meetings, and meeting instances, as well as a log of events. The events can include users joining or leaving a meeting, and a meeting can be public or have a specific audience. The project will involve implementing several functions in Python or Java that connect to Redis, including functions for joining and leaving meetings, posting chat messages, and displaying information about meetings and participants.The project can be found [here](redis/) in more detail.
 
 ## Assignment 3 - Azure Stream Analytics
 
